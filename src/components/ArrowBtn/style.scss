@@ -1,0 +1,91 @@
+@import '../../styles/variables.scss';
+
+#arrow-btn-container{
+  display: flex;
+  align-items: center;
+  width: max-content;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  .label {
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    transform: translateX(-40px);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: .3s;
+  }
+
+  .label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+    background-color: $bg-color-01;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .btn-right, .btn-left {
+    transform: scale(0);
+    position: relative;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background: $bg-color-03;
+    color: $text-color-03;
+    font-size: 1.5rem;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .btn-right {
+    opacity: 1;
+    transform: translateX(-30px) scale(1);
+    transition-delay: 1s;
+  }
+
+  .up {
+    transform: none;
+  }
+  .right {
+    transform: rotate(90deg);
+  }
+  .down {
+    transform: rotate(180deg);
+  }
+  .left {
+    transform: rotate(-90deg);
+  }
+
+  &:hover{
+    span {
+      transform: translateX(10px);
+    }
+
+    .label::after {
+      width: 0;
+    }
+
+    .btn-right {
+      transform: translateX(-30px) scale(0);
+      opacity: 0;
+      transition-delay: 0s;
+    }
+    
+    .btn-left {
+      opacity: 1;
+      transform: scale(1);
+      transition-delay: 1s;
+    }
+  }
+}

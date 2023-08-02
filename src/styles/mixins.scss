@@ -1,0 +1,13 @@
+@import './variables';
+
+@mixin section-padding {
+  @media (min-width: $mobile) {
+    padding: 48px 24px;
+  }
+}
+
+@mixin title {
+  @media (min-width: $mobile) {
+    font-size: 3.5rem;
+  }
+}

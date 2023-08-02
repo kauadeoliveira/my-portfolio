@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+#hero {
+  .gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../../assets/gradient.svg');
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 300px;
+    opacity: 0.8;
+  }
+
+  .section__content {
+    position: absolute;
+    z-index: 10;
+  }
+
+  .title-container {
+    span {
+      font-size: 14px;
+    }
+
+    em {
+      color: $bg-color-01;
+      font-style: normal;
+    }
+  }
+
+  .summary-about{
+    margin-top: 1rem;
+    word-wrap: break-word;
+
+    span {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 2.5rem 0;
+    }
+  }
+
+  .arrow-btn-container {
+    width: max-content;
+    margin: auto;
+  }
+}
